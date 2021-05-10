@@ -1,36 +1,25 @@
-import axios from 'axios'
+
 import React from 'react'
 
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import Coins from './coins/Coins'
+import Home from './components/Home'
+import CoinDetails from './coins/CoinDetails'
+import Nav from './components/Nav'
+
+
 function App() {
-  const [coins, setAllCoins] = React.useState(null)
-
-  React.useEffect( () => {
-    const getData = async () => {
-      try {
-        const response = await axios.get('https://api.coincap.io/v2/assets/')
-        setAllCoins(response.data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    getData()
-  }, [])
-
-  console.log(coins)
-
   return (
     <>
-      {coins ? (
-        coins.map(coin => (
-          <h1 key={coin.id}>{coin.name}</h1>
-        ))
-      )
-        : 
-        (
-          <>
-            <p>Loading..</p>
-          </>
-        )}
+      <BrowserRouter>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/coins/:id" component={CoinDetails} />
+          <Route path="/coins" component={Coins} />
+        </Switch>
+      </BrowserRouter>
     </>
   )
 }
