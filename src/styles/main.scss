@@ -1,15 +1,39 @@
-.container {
-  display: flex;
-  flex-direction: column;
+.is-horizontal-center {
+  justify-content: center;
+}
+img {
+  height: 200px;
+  
 }
 
-.card {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; 
-  margin: 50px;
-  border: 2px solid grey;
+.tile {
+  width: 100%;
+  min-height: 100%;
 }
+.card {
+  min-width: 100%;
+  min-height: 100%;
+}
+.card-header {
+  max-height: 50px;
+  overflow: hidden;
+}
+.card-content {
+  padding-bottom: auto;
+  margin-bottom: auto;
+  
+}
+.card-image {
+  margin-bottom: auto;
+}
+.card-footer {
+  padding-top: auto;
+  margin-bottom: 0;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+
 
 
 
