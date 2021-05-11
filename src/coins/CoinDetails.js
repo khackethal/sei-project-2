@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import TradingViewWidget from 'react-tradingview-widget'
 // ! Added preloader
 import Preloader from '../preloader/Preloader'
+import CoinMarkets from '../coins/CoinMarkets'
 
 function CoinDetails() {
   const coinId = useParams().id
@@ -113,6 +114,7 @@ function CoinDetails() {
                   />
                 </div>
               </div>
+        
             ) : (
               <>
                 <Preloader />
@@ -121,23 +123,9 @@ function CoinDetails() {
           </div>
         </div>
       </div>
+      {coin && <><CoinMarkets /></> }
     </>
   )
 }
 
 export default CoinDetails
-
-{
-  /* <section className="hero is-success is-halfheight is-overlay">
-                <div className="hero-body">
-                  <div className="">
-                    <p className="title"><iframe src="https://lottiefiles.com/iframe/57735-crypto-coins"></iframe></p>
-                    <p className="subtitle">Half height subtitle</p>
-                  </div>
-                </div>
-              </section>
-              <div className="section is-overlay">
-                <iframe src="https://lottiefiles.com/iframe/57735-crypto-coins"></iframe>
-                <p>Loading</p>
-              </div> */
-}

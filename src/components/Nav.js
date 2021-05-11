@@ -40,6 +40,10 @@ function Nav() {
               {' '}
               Exchange Calculator
             </Link>
+            <Link to="/crystalball" className="navbar-item">
+              {' '}
+              Chrystal Ball
+            </Link>
           </div>
         </div>
       </div>
