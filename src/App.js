@@ -7,6 +7,7 @@ import Coins from './coins/Coins'
 import Home from './components/Home'
 import CoinDetails from './coins/CoinDetails'
 import Nav from './components/Nav'
+import Calculator from './components/Calculator'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/coins/:id" component={CoinDetails} />
           <Route path="/coins" component={Coins} />
+          <Route path="/calculator" component={Calculator} />
         </Switch>
       </BrowserRouter>
     </>

@@ -2,7 +2,7 @@
   justify-content: center;
 }
 img {
-  height: 200px;
+  width: 64px;
   
 }
 
@@ -31,6 +31,24 @@ img {
   margin-bottom: 0;
   max-height: 50px;
   overflow: hidden;
+}
+.homepage {
+  .hero-body:before{
+    content: "";
+    background: rgba(0,0,0,.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+}
+  .hero-body {
+    background-image: url('https://mk0grmdailybale2a4k3.kinstacdn.com/wp-content/uploads/2021/05/cryptocurrency-1.jpeg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.123);
+  }
 }
 
 

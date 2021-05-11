@@ -6,3 +6,6 @@ GET http://api.coincap.io/v2/assets/
 ###
 
 GET http://api.coincap.io/v2/exchanges
+
+###
+GET https://images.coinviewer.io/currencies/64x64/bitcoin.png  
