@@ -9,6 +9,7 @@ import CoinDetails from './coins/CoinDetails'
 import Nav from './components/Nav'
 import Calculator from './components/Calculator'
 import CrystalBall from './components/CrystalBall'
+import Error from './components/Error'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/coins" component={Coins} />
           <Route path="/calculator" component={Calculator} />
           <Route path="/crystalball" component={CrystalBall} />
+          <Route path="/error" component={Error} />
         </Switch>
       </BrowserRouter>
     </>

@@ -11,7 +11,6 @@ function Calculator() {
   const [finalAmount, setFinalAmount] = React.useState(null)
 
   React.useEffect(() => {
-
     const getData = async () => {
       try {
         const response = await axios.get('https://api.coincap.io/v2/assets/')
@@ -22,10 +21,6 @@ function Calculator() {
     }
     getData()
   }, [coins])
-
-  // const handleInput = (e) => {
-  //   setSearchTerm(e.target.value)
-  // }
 
   const handleDropdown = (e) => {
     setSelectedCoin(e.target.value)
@@ -47,67 +42,69 @@ function Calculator() {
     )
   })
 
-
   const handleInputBudget = (e) => {
     setBudget(e.target.value)
   }
 
-
-
   const handleCalculate = () => {
     Calculator()
-
   }
 
-  function Calculator()  {
+  function Calculator() {
     if (budget && selectedCoin) {
       const canGet = Number(budget) / Number(selectedCoin)
       setFinalAmount(canGet)
     }
   }
-  
-
-
 
   return (
     <>
-      <h1>Calculator</h1>
-      <h1>Select your coin</h1>
-      {/* <input
-        className="input"
-        type="text"
-        placeholder="Search .."
-        onChange={handleInput}
-        value={searchTerm}
-      /> */}
-      <select onChange={handleDropdown} > 
-        <option></option>
-        {filteredCoins ? (
-          filteredCoins.map((coin) =>
-            <option value={coin.priceUsd} key={coin.id}>{coin.name}</option>)) :
-          (<Preloader />)}
-      </select>
+      <div className="container">
+        <div className="section">
+          <div className="box">
+            <div className="title is-4">Calculator</div>
+            <div className="field">
+              <label className="label">Select your coin</label>
+              <div className="control">
+                <select onChange={handleDropdown}>
+                  <option></option>
+                  {filteredCoins ? (
+                    filteredCoins.map((coin) => (
+                      <option value={coin.priceUsd} key={coin.id}>
+                        {coin.name}
+                      </option>
+                    ))
+                  ) : (
+                    <Preloader />
+                  )}
+                </select>
+                <button className="button" onClick={handleClear}>
+                  Clear
+                </button>
+                <h1>Enter your budget in USD $</h1>
+                <input
+                  className="input"
+                  type="text"
+                  placeholder="$ .."
+                  onChange={handleInputBudget}
+                />
 
-      <button className="button" onClick={handleClear}>
-              Clear
-      </button>
+                <button className="button" onClick={handleCalculate}>
+                  Calculate!
+                </button>
+              </div>
+            </div>
+          </div>
 
-      <h1>Enter your budget in USD $</h1>
-      <input
-        className="input"
-        type="text"
-        placeholder="$ .."
-        onChange={handleInputBudget}
-      />
-
-      <button className="button" onClick={handleCalculate}>
-            Calculate! 
-      </button>
-      
-      <div> {finalAmount ? `At current market rate you can buy ${finalAmount} coins of your chosen coin.` : ''}</div>
-
+          <div>
+            {' '}
+            {finalAmount
+              ? `At current market rate you can buy ${finalAmount} coins of your chosen coin.`
+              : ''}
+          </div>
+        </div>
+      </div>
     </>
-
   )
 }
 

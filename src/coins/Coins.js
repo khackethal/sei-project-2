@@ -1,10 +1,11 @@
 import axios from 'axios'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 // ! Added preloader
 import Preloader from '../preloader/Preloader'
 
 function Coins() {
+  const history = useHistory()
   const [coins, setAllCoins] = React.useState(null)
   const [searchTerm, setSearchTerm] = React.useState('')
 
@@ -17,6 +18,7 @@ function Coins() {
           setAllCoins(response.data)
         } catch (err) {
           console.log(err)
+          history.push('./error')
         }
       }
       getData()
@@ -70,7 +72,7 @@ function Coins() {
           </div>
         </div>
       </section>
-      
+
       <div className="container">
         <div className="section">
           <div className="columns is-multiline">

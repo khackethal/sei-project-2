@@ -42,7 +42,7 @@ function Nav() {
             </Link>
             <Link to="/crystalball" className="navbar-item">
               {' '}
-              Chrystal Ball
+              Crystal Ball 🔮
             </Link>
           </div>
         </div>

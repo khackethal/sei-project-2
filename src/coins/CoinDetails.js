@@ -1,17 +1,16 @@
 import React from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import TradingViewWidget from 'react-tradingview-widget'
-// ! Added preloader
 import Preloader from '../preloader/Preloader'
 import CoinMarkets from '../coins/CoinMarkets'
 
 function CoinDetails() {
+  const history = useHistory()
   const coinId = useParams().id
   const [coin, setCoin] = React.useState(null)
 
   React.useEffect(() => {
-    // ! Added interval to keep price updated / added clearInterval
     const interval = setInterval(() => {
       const getData = async () => {
         try {
@@ -21,18 +20,16 @@ function CoinDetails() {
           setCoin(response.data)
           console.log(coin)
         } catch (err) {
-          //console.log(err)
+          history.push('./error')
         }
       }
       getData()
     }, 5000)
     return () => clearInterval(interval)
   }, [coinId, coin])
-  // ! Added float to shorten the numbers
+
   const toFloat = (num, places) => Number.parseFloat(num).toFixed(places)
-  // console.log(coinId)
-  // ! Added Section Div to main container
-  // ! Added Hero, moved image to hero
+
   return (
     <>
       {coin && (
@@ -52,7 +49,6 @@ function CoinDetails() {
           </div>
         </section>
       )}
-      {/* {coin && console.log('Coin', coin.data.symbol, coin)} */}
       <div className="container">
         <div className="section">
           <div className="box">
@@ -114,7 +110,6 @@ function CoinDetails() {
                   />
                 </div>
               </div>
-        
             ) : (
               <>
                 <Preloader />
