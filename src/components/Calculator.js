@@ -25,7 +25,7 @@ function Calculator() {
   const handleDropdown = (e) => {
     setSelectedCoin(e.target.value)
     setCoinName(e.target.id)
-    console.log(selectedCoin, e, e.target.value)
+    console.log(selectedCoin, e, e.target.value, coinName)
   }
 
   const handleClear = () => {
