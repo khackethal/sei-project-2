@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
-// ! Added preloader
 import Preloader from '../preloader/Preloader'
 
 function Coins() {
@@ -10,7 +9,7 @@ function Coins() {
   const [searchTerm, setSearchTerm] = React.useState('')
 
   React.useEffect(() => {
-    // ! Added interval
+
     const interval = setInterval(() => {
       const getData = async () => {
         try {
@@ -41,14 +40,13 @@ function Coins() {
       coin.symbol.toLowerCase().includes(searchTerm)
     )
   })
-  // ! Added Float Function
+
   const toFloat = (num, places) => Number.parseFloat(num).toFixed(places)
 
   console.log(searchTerm)
 
   return (
-    // ! Added hero, placed search form into hero
-    // ! Added css styling to search form
+
     <>
       <section className="hero is-primary">
         <div className="hero-body">
@@ -91,12 +89,12 @@ function Coins() {
                         </div>
                       </div>
                       <div className="card-content is-flex is-horizontal-center">
-                        <img // ! Added new img url
+                        <img 
                           src={`https://assets.coincap.io/assets/icons/${coin.symbol.toLowerCase()}@2x.png`}
                         />
                       </div>
                       <div className="card-footer">
-                        <span // ! Added Footer Items
+                        <span 
                           className="card-footer-item"
                         >
                           Rank: # {coin.rank}

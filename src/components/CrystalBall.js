@@ -109,7 +109,6 @@ function CrystalBall() {
                 </div>
               </div>
 
-              {/* <button>Reset</button> */}
             </div>
             <div className="box">
               <div className="section">
