@@ -18,16 +18,16 @@ For the best user experience I would recommend to look at both the coin index an
 
 ## Table of Contents
 
-1. [Brief](https://github.com/khackethal/sei-project-2-client#brief)
-2. [Approach](https://github.com/khackethal/sei-project-2-client#brief)
-   - [MVP](https://github.com/khackethal/sei-project-2-client#mvp)
-   - [Technologies](https://github.com/khackethal/sei-project-2-client#technologies)
-   - [Methodologies](https://github.com/khackethal/sei-project-2-client#methodologies)
-3. [Planning](https://github.com/khackethal/sei-project-2-client#planning)
-   - [Front End](https://github.com/khackethal/sei-project-2-client#front-end)
-4. [Project Frames](https://github.com/khackethal/sei-project-2-client#project-frames)
-5. [Wins & Challenges](https://github.com/khackethal/sei-project-2-client#wins)
-6. [Key Learnings](https://github.com/khackethal/sei-project-2-client#key-learnings)
+1. [Brief](https://github.com/khackethal/sei-project-2#brief)
+2. [Approach](https://github.com/khackethal/sei-project-2#brief)
+   - [MVP](https://github.com/khackethal/sei-project-2#mvp)
+   - [Technologies](https://github.com/khackethal/sei-project-2#technologies-frameworks-apis)
+   - [Methodologies](https://github.com/khackethal/sei-project-2#methodologies)
+3. [Planning](https://github.com/khackethal/sei-project-2#planning)
+   - [Front End](https://github.com/khackethal/sei-project-2#front-end)
+4. [Project Frames](https://github.com/khackethal/sei-project-2#project-frames)
+5. [Wins & Challenges](https://github.com/khackethal/sei-project-2#wins-challenges--bugs)
+6. [Key Learnings](https://github.com/khackethal/sei-project-2#key-learnings)
 
 
 
