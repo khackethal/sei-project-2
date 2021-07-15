@@ -12,7 +12,7 @@ For the best user experience I would recommend to look at both the coin index an
 
 
 ## Authors
-- Steven Saunders (waiting for Github so I can link)
+- [Steven Saunders](https://github.com/SuperSuperStore)
 - Kat Hackethal
 
 
