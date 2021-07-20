@@ -80,7 +80,7 @@ We worked on the Coin Index and Single Coin pages together, I then wrote the Cal
 
 The calculator function is fairly simple, it asks the user to input their budget in USD and will return how many coins they can purchase of any given coin they select from a dropdown list.
 
-```
+```js
 import axios from 'axios'
 import React from 'react'
 import Preloader from '../preloader/Preloader'
@@ -204,7 +204,7 @@ To add to the "prediction" feel the inputs are personalised to the user, they ar
 As a really low age would cause an error in the function there is a caveat on the site that you must be 16 years or older to partake.
 The function also generates a random number using ```Math.random()```  to ensure the same user inputs give a different result each time for added unpredictability. The full code is shown below. 
 
-```
+```js
 import React from 'react'
 import axios from 'axios'
 import Preloader from '../preloader/Preloader'
