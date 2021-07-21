@@ -363,15 +363,24 @@ export default CrystalBall
 
 ### Coin Index
 
-![ Coin Index](.readme_files/cc_allcoins.png)
+<p>
+<img src=".readme_files/cc_allcoins.png"alt="Coin Index"/>
+</p>
+
 
 ### Coin Detail
 
-![ Coin Detail](.readme_files/cc_coindetail.png)
+<p>
+<img src=".readme_files/cc_coindetail.png"alt="Coin Detail"/>
+</p>
 
 ### Crystal Ball
 
-![ Crystal Ball](.readme_files/cc_crystalball.png)
+<p>
+<img src=".readme_files/cc_crystalball.png"alt="Crystal Ball"/>
+</p>
+
+
  
 
  ## Wins, Challenges & Bugs
